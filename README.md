@@ -6,7 +6,7 @@ Analisis lengkap (kode, grafik, dan hasil) ada di [insurance_analysis.md](insura
 
 ## Yang ketemu
 
-Awalnya kupikir distribusi biaya yang miring ke kanan butuh model Gamma. Setelah kuuji (data dibagi 80:20 secara acak sebanyak 30 kali), ternyata regresi linear biasa lebih baik dari Gamma (rata-rata RMSE 6.172 vs 7.964). Yang paling berpengaruh ke akurasi justru interaksi antara merokok dan BMI (RMSE turun ke 4.964), dan kalau BMI diganti penanda obesitas (BMI 30 ke atas), errornya turun lagi ke 4.601.
+Awalnya saya kira distribusi biaya yang miring ke kanan butuh model Gamma. Setelah saya uji (data dibagi 80:20 secara acak sebanyak 30 kali), ternyata regresi linear biasa lebih baik dari Gamma (rata-rata RMSE 6.172 vs 7.964). Yang paling berpengaruh ke akurasi justru interaksi antara merokok dan BMI (RMSE turun ke 4.964), dan kalau BMI diganti penanda obesitas (BMI 30 ke atas), errornya turun lagi ke 4.601.
 
 Modelnya menjelaskan sekitar 86% variasi biaya. Efek yang paling menarik ada di kombinasi merokok dan obesitas:
 
@@ -19,7 +19,7 @@ Rata-rata biaya aktual per kelompok. Obesitas hampir tidak mengubah biaya kalau 
 
 ## Catatan
 
-Model ini kupilih karena paling akurat di data uji, bukan karena semua asumsi regresi linear terpenuhi. Grafik residualnya masih menunjukkan pola yang belum tertangkap. Batas obesitas 30 juga kupilih setelah melihat grafik dari seluruh data, jadi perbaikan errornya sedikit lebih optimis dari kenyataan. Datanya data observasi dari dataset contoh, jadi yang terlihat adalah hubungan, bukan sebab-akibat.
+Model ini saya pilih karena paling akurat di data uji, bukan karena semua asumsi regresi linear terpenuhi. Grafik residualnya masih menunjukkan pola yang belum tertangkap. Batas obesitas 30 juga saya pilih setelah melihat grafik dari seluruh data, jadi perbaikan errornya sedikit lebih optimis dari kenyataan. Datanya data observasi dari dataset contoh, jadi yang terlihat adalah hubungan, bukan sebab-akibat.
 
 ## File
 
